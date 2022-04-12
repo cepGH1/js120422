@@ -149,9 +149,7 @@ function adder2(num1, num2, num3){
 }
 
 adder2(8,4,6);
-// don't forget arrays can be sorted
-function adder3(myArray){
-    let myArray = myArray;
-    let mySortedArray = myArray.sort();
-    
-}
+
+
+
+
