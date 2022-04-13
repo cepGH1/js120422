@@ -33,7 +33,7 @@ function increment(){
 
 
 function postResults(){
-   
+   //creates an element
     const li = document.createElement("li");
     li.textContent = count;
     result.append(li);
@@ -42,11 +42,7 @@ function postResults(){
          
 }
 
-function postResultsAsBullets(){
-let myString2 =count;
-li.innerText += myString2;
-listElement.append(li);
-}
+
 
 //put eventlisteners at the bottom
 plusOne.addEventListener("click", increment);
