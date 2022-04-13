@@ -1,0 +1,25 @@
+#countEl{
+    color:blue;
+}
+
+#titleEl{
+    color:red;
+}
+
+#plusOne{
+    color: black;
+}
+
+#result{
+    color: black;
+}
+
+body{
+    background-color: aliceblue;
+}
+#saveButton{
+    background-color: pink;
+}
+#history{
+    color:purple;
+}

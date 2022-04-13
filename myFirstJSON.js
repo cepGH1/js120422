@@ -9,10 +9,10 @@ let plato = {
 
 console.log(plato);
 //exercises 1 and 2
-let darthVader ={
+let darthVader = {
     allegience: "empire",
-    weapon: "lightsabre", 
-    sith:  true
+    weapon: "lightsabre",
+    sith: true
 };;
 console.log(`Darthvader's allegiance is to the ${darthVader.allegience}`);
 console.log(`Darth Vader is a Jedi? ${darthVader.sith ? false : true}`);
@@ -21,37 +21,37 @@ console.log(`Darth Vader is a Jedi? ${darthVader.sith ? false : true}`);
 plato.furtherKey = "new value";
 console.log(plato);
 
-let daveCar ={
-    make:"ford",
+let daveCar = {
+    make: "ford",
     model: "T",
-    colour:"black",
+    colour: "black",
     name: "chunk"
 };
 
-let clareCar ={
-    make:"volkswagen",
+let clareCar = {
+    make: "volkswagen",
     model: "polo",
-    colour:"blue",
+    colour: "blue",
     name: "toffee"
 };
 //an array of json objects, can add other objects manually
-let garage = [daveCar, clareCar, {name:"liver", model:"mondeo", make:"ford", colour:"red"}];
+let garage = [daveCar, clareCar, { name: "liver", model: "mondeo", make: "ford", colour: "red" }];
 
 //enhanced for loop
-for(let car in garage){
+for (let car in garage) {
     console.log(garage[car].make);
 };
 
 //nested array
 let massiveJSON = {
-    smallerJSON:{
-        "students":[{
+    smallerJSON: {
+        "students": [{
             "clare": "liverpool",
             "seer": "burnley",
             "fred": "warrington"
         },
-    {chancer:"villian", dodger:"rishi"}],
-    "heros":["angel", "superman", "leon"]
+        { chancer: "villian", dodger: "rishi" }],
+        "heros": ["angel", "superman", "leon"]
     }
 };
 
@@ -77,35 +77,48 @@ let mfs = JSON.stringify(myFavouriteStudent);
 
 //Falsey 
 //making our own notes and doing the exercises
-function ageCheck(myAge){
- let age = myAge;
-if(age>17 && age<66){
-  return "welcome to the world of work";
-}
-else if(age <18){
-    return "underage";
-}
-else{
-    return "senior";
-}
+function ageCheck(myAge) {
+    let age = myAge;
+    if (age > 17 && age < 66) {
+        return "welcome to the world of work";
+    }
+    else if (age < 18) {
+        return "underage";
+    }
+    else {
+        return "senior";
+    }
 }
 
 let myNextString = ageCheck(45);
 console.log(myNextString);
 
 //function scope - hoisting - global - can be run anywhere in the code
-function multiply(a,b){
-    console.log(a*b);
+function multiply(a, b) {
+    console.log(a * b);
 }
 //anonymous functions are not hoisted only can be run after appearance in code
-const divide = function(a,b){
-    console.log(a/b);
+const divide = function (a, b) {
+    console.log(a / b);
 }
 
 //can only be run below here
 
 // arrow function =>
 
-const message1 = () => console.log("have you got the message");
+const message1 = () => console.log(" anonymous function, have you got the message");
 
 message1();
+// this is a global arrow function
+let globalArrowFunction = () => console.log("can be called anywhere");
+//refactor old code
+
+//an arrow function to run a for loop
+
+let findMake = () =>{
+    for(let i=0; i<10; i++){
+        console.log(i);
+    }
+}
+
+findMake();
