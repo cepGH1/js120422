@@ -60,3 +60,4 @@ console.log("Jane has to pay £" + jane.calculateTaxPayable() + " in tax");
 let john = new salary(25000);
 console.log( "John pays " + john.calculateTax() + " tax rate");
 console.log( "John has to pay £" + john.calculateTaxPayable() + " in tax");
+
