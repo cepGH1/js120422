@@ -8,7 +8,12 @@ const history = document.querySelector("#history");
 const li = document.createElement("li");
 const para = document.createElement("p");
 const appender = document.querySelector("#appender");
+//const listElement = document.querySelector('ul')
+//const listItem = document.createElement("li");
+//const listItemCheckbox = document.createElement("input");
+//const listItemLabel = document.createElement("label");
 
+//listElement.append(listItem, listItemCheckbox, listItemLabel);
 
 let count = 0;
 let countHistory;
@@ -27,13 +32,10 @@ function increment(){
 
 
 function postResults(){
-     para.innerText = countEl.textContent; 
-    li.innerText = countEl.textContent;
-    result.append(li);
-    document.body.appendChild(para);
-    countEl.textContent = 0;
+    let myString = count + "- ";
+    result.textContent += myString;
     count = 0;
-    appender.appendChild(para);
+    countEl.textContent = 0;
     
     
      
