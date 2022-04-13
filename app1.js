@@ -8,7 +8,7 @@ const history = document.querySelector("#history");
 const li = document.createElement("li");
 const para = document.createElement("p");
 const appender = document.querySelector("#appender");
-//const listElement = document.querySelector('ul')
+const listElement = document.querySelector('ul')
 //const listItem = document.createElement("li");
 //const listItemCheckbox = document.createElement("input");
 //const listItemLabel = document.createElement("label");
@@ -17,6 +17,7 @@ const appender = document.querySelector("#appender");
 
 let count = 0;
 let countHistory;
+let clickHistory = [];
 
 
 
@@ -32,13 +33,25 @@ function increment(){
 
 
 function postResults(){
-    let myString = count + "- ";
-    result.textContent += myString;
+    //let myString = count + "- ";
+    //result.textContent += myString;
+    //let myString2 =count;
+     //li.innerText += myString2;
+    //listElement.append(li);
+    result.innerHTML = " ";
+    clickHistory.push(count);
+    for(let i=0;i<clickHistory.length; i++){
+        result.innerHTML += "<li>" + clickHistory[i] + "</li>";
+    }
     count = 0;
     countEl.textContent = 0;
-    
-    
-     
+         
+}
+
+function postResultsAsBullets(){
+let myString2 =count;
+li.innerText += myString2;
+listElement.append(li);
 }
 
 //put eventlisteners at the bottom
