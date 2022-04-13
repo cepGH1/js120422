@@ -33,16 +33,10 @@ function increment(){
 
 
 function postResults(){
-    //let myString = count + "- ";
-    //result.textContent += myString;
-    //let myString2 =count;
-     //li.innerText += myString2;
-    //listElement.append(li);
-    result.innerHTML = " ";
-    clickHistory.push(count);
-    for(let i=0;i<clickHistory.length; i++){
-        result.innerHTML += "<li>" + clickHistory[i] + "</li>";
-    }
+   
+    const li = document.createElement("li");
+    li.textContent = count;
+    result.append(li);
     count = 0;
     countEl.textContent = 0;
          
