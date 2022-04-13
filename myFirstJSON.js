@@ -61,6 +61,51 @@ let myString = JSON.stringify(plato);
 console.log(myString);
 
 console.log(JSON.stringify(massiveJSON.smallerJSON.students));
+let myStudents = massiveJSON.smallerJSON.students;
+console.log(JSON.stringify(myStudents));
+console.log(myStudents)
+let myFavouriteStudent = massiveJSON.smallerJSON.students[0].clare;
+let mfs = JSON.stringify(myFavouriteStudent);
+
 
 //JSON objects don't allow single quotes
 
+//parse strings into JSON objects - I can't get this to work
+//let secondString = `{name:"clare"}`;
+//let theJSON = JSON.parse(secondString);
+//console.log(theJSON);
+
+//Falsey 
+//making our own notes and doing the exercises
+function ageCheck(myAge){
+ let age = myAge;
+if(age>17 && age<66){
+  return "welcome to the world of work";
+}
+else if(age <18){
+    return "underage";
+}
+else{
+    return "senior";
+}
+}
+
+let myNextString = ageCheck(45);
+console.log(myNextString);
+
+//function scope - hoisting - global - can be run anywhere in the code
+function multiply(a,b){
+    console.log(a*b);
+}
+//anonymous functions are not hoisted only can be run after appearance in code
+const divide = function(a,b){
+    console.log(a/b);
+}
+
+//can only be run below here
+
+// arrow function =>
+
+const message1 = () => console.log("have you got the message");
+
+message1();
