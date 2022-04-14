@@ -5,15 +5,8 @@ const plusOne = document.querySelector("#plusOne");
 const result = document.querySelector("#result");
 const saveButton = document.querySelector("#saveButton");
 const history = document.querySelector("#history");
-const li = document.createElement("li");
-const para = document.createElement("p");
-const appender = document.querySelector("#appender");
-const listElement = document.querySelector('ul')
-//const listItem = document.createElement("li");
-//const listItemCheckbox = document.createElement("input");
-//const listItemLabel = document.createElement("label");
 
-//listElement.append(listItem, listItemCheckbox, listItemLabel);
+
 
 let count = 0;
 let countHistory;
